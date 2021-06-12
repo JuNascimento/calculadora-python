@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/Users/julia.nascimento/.pyenv/versions/3.8.3/envs/calculadora-python/bin/python",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true
+}
