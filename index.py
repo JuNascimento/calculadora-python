@@ -1,7 +1,7 @@
 ''' *-* -*- coding: utf-8 -*-
-Calculadora do Predo - v1
+Calculadora do Predo - v2
 Autora: Julia Nascimento
-Funções: soma, subtração, multiplicação, divisão e exponenciação de números
+Funções: soma, subtração, multiplicação, divisão, exponenciação e módulo de números
 '''
 
 
@@ -72,20 +72,22 @@ def escolhe_operacao(primeiro_numero, segundo_numero):
     opcao_escolhida = input('\n\t--> Digite aqui a opção desejada: ')
 
     if opcao_escolhida == '1':
-        soma(primeiro_numero, segundo_numero)
+        calcula_soma(primeiro_numero, segundo_numero)
     elif opcao_escolhida == '2':
-        subtrai(primeiro_numero, segundo_numero)
+        calcula_subtracao(primeiro_numero, segundo_numero)
     elif opcao_escolhida == '3':
-        multiplica(primeiro_numero, segundo_numero)
+        calcula_multiplicaco(primeiro_numero, segundo_numero)
     elif opcao_escolhida == '4':
-        divide(primeiro_numero, segundo_numero)
+        calcula_divisao(primeiro_numero, segundo_numero)
     elif opcao_escolhida == '5':
-        exponencia(primeiro_numero, segundo_numero)
+        calcula_exponencial(primeiro_numero, segundo_numero)
+    elif opcao_escolhida == '6':
+        calcula_modulo(primeiro_numero, segundo_numero)
     else:
         print('\n\n\tVocê digitou uma opção inválida, mané!\n\n')
 
 
-def soma(primeiro_numero, segundo_numero):
+def calcula_soma(primeiro_numero, segundo_numero):
     print('\n\n\t--> Sua opção escolhida foi SOMA\n')
 
     resultado = primeiro_numero + segundo_numero
@@ -93,7 +95,7 @@ def soma(primeiro_numero, segundo_numero):
     mostra_resultado('+', primeiro_numero, segundo_numero, resultado)
 
 
-def subtrai(primeiro_numero, segundo_numero):
+def calcula_subtracao(primeiro_numero, segundo_numero):
     print('\n\n\t--> Sua opção escolhida foi SUBTRAÇÃO\n')
 
     resultado = primeiro_numero - segundo_numero
@@ -101,7 +103,7 @@ def subtrai(primeiro_numero, segundo_numero):
     mostra_resultado('-', primeiro_numero, segundo_numero, resultado)
 
 
-def multiplica(primeiro_numero, segundo_numero):
+def calcula_multiplicaco(primeiro_numero, segundo_numero):
     print('\n\n\t--> Sua opção escolhida foi MULTIPLICAÇÃO\n')
 
     resultado = primeiro_numero * segundo_numero
@@ -109,7 +111,7 @@ def multiplica(primeiro_numero, segundo_numero):
     mostra_resultado('*', primeiro_numero, segundo_numero, resultado)
 
 
-def divide(primeiro_numero, segundo_numero):
+def calcula_divisao(primeiro_numero, segundo_numero):
     print('\n\n\t--> Sua opção escolhida foi DIVISÃO\n')
 
     resultado = primeiro_numero / segundo_numero
@@ -117,12 +119,20 @@ def divide(primeiro_numero, segundo_numero):
     mostra_resultado('/', primeiro_numero, segundo_numero, resultado)
 
 
-def exponencia(primeiro_numero, segundo_numero):
+def calcula_exponencial(primeiro_numero, segundo_numero):
     print('\n\n\t--> Sua opção escolhida foi EXPONENCIAÇÃO\n')
 
     resultado = primeiro_numero ** segundo_numero
 
     mostra_resultado('**', primeiro_numero, segundo_numero, resultado)
+
+
+def calcula_modulo(primeiro_numero, segundo_numero):
+    print('\n\n\t--> Sua opção escolhida foi MÓDULO\n')
+
+    resultado = primeiro_numero % segundo_numero
+
+    mostra_resultado('%', primeiro_numero, segundo_numero, resultado)
 
 
 def mostra_resultado(operacao, primeiro_numero, segundo_numero, resultado):
