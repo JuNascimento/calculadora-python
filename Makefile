@@ -1,4 +1,4 @@
-run:
+run: lint
 	@pipenv run python index.py
 
 lint:
